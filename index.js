@@ -81,6 +81,7 @@ const getOTP = (sessionId, device, nomor, nomorspasi) => new Promise((resolve, r
 })
     .then(res => res.json())
     .then(res => {
+        console.log(res);
         resolve(res)
     })
     .catch(err => reject(err))
@@ -149,7 +150,7 @@ const register = (device, nomor, token, email, nama1, nama2) => new Promise((res
             "firstName":nama1,
             "identifiers":[{
                 "type":"mobile",
-                "value":nomor},{"type":"email","value":email}],"lastName":nama2}],"referralCode":"1a7j930aj","statusLabel":"Active",
+                "value":nomor},{"type":"email","value":email}],"lastName":nama2}],"referralCode":"1cjd030aj","statusLabel":"Active",
         "statusLabelReason":"App Registration"})
 })
     .then(res => res.json())
